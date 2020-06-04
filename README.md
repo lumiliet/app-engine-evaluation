@@ -19,9 +19,9 @@ Correctly configuring health checks will prevent the server from receiving traff
 The app is currently deployed as a NodeJS application. Google runs "yarn start" automatically when it runs, but this starts the development server. This server is heavy on cpu and ram as it compiles the resources at runtime, does not compress the files and is a lot less performant than a proper production web server.
 
 It takes 20 minutes for the development server to start, according to the logs, and during this time it is completely unresponsive. 
-[An example of 502 while the server is starting](request-during-startup.PNG) and [and example of the 20 minute startup time](startup-time.PNG).
+[An example of 502 while the server is starting](request-during-startup.PNG) and [an example of the 20 minute startup time](startup-time.PNG).
 
-On May 27 the cpu and memory of the virtual machines [were increased](https://github.com/Opplysningen1881/voice-app/commit/0afa3f8cdfe9e3cf9980355f0f818a85c68dda15). There has been no reported 502 since this time, so the higher specs likely enabled the server to start fast enough for users not to trigger a 502. Note it is still possible, just less likely than before.
+On May 27 the cpu and memory of the virtual machines were increased, [link to commit](https://github.com/Opplysningen1881/voice-app/commit/0afa3f8cdfe9e3cf9980355f0f818a85c68dda15). There has been no reported 502 since this time, so the higher specs likely enabled the server to start fast enough for users not to trigger a 502. Note it is still possible, just less likely than before.
 
 
 ## Custom runtime
