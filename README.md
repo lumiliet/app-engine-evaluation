@@ -48,7 +48,7 @@ The alternative is to trigger builds whenever something changes in git, and auto
 
 ## Automatic scaling
 
-What amount of trafic is expected? The current setup is limited to 2 instances. Will this always be sufficient? Consider configuring for automatic scaling.
+What amount of traffic is expected? The current setup is limited to 2 instances. Will this always be sufficient? Consider configuring for automatic scaling.
 
 ## 1881searchapp
 The app is fetched from /1881searchapp when used on the website. I don't know why this url is used, from what I can see it is not significant and returns the same as /jklasdfjkl would.
