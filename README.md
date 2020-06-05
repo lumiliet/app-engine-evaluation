@@ -12,7 +12,7 @@ Health checks are not configured for this app, so google thinks the service is r
 
 [An example of readiness_check before the server is actually ready.](readiness-check-200-before-actually-ready.PNG).
 
-Correctly configuring health checks will prevent the server from receiving traffic while unresponsive, and in turn fix the 502 problem.
+Correctly configuring health checks will prevent the server from receiving traffic while unresponsive, and in turn fix the 502 problem. With health checks working it should be safe to automatically route traffic to a newly deployed instance.
 
 
 ## Development server
@@ -46,7 +46,7 @@ Currently the developer checks out a branch on their machine and runs 'gcloud ap
 
 The alternative is to trigger builds whenever something changes in git, and automatically deploy to the respective environments. Dev branch to test environment and master to prod for example. This makes the build process more consistent and predictable.
 
-## Traffic
+## Automatic scaling
 
 What amount of trafic is expected? The current setup is limited to 2 instances. Will this always be sufficient? Consider configuring for automatic scaling.
 
