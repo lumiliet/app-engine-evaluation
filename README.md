@@ -24,13 +24,17 @@ It takes 20 minutes for the development server to start, according to the logs, 
 On May 27 the cpu and memory of the virtual machines were increased, [link to commit](https://github.com/Opplysningen1881/voice-app/commit/0afa3f8cdfe9e3cf9980355f0f818a85c68dda15). There has been no reported 502 since this time, so the higher specs likely enabled the server to start fast enough for users not to trigger a 502. Note it is still possible, just less likely than before.
 
 
-## Custom runtime
+## Production server
 
 The development server needs to be replaced with a production server. Since the artifacts are compiled html, js, etc. there is no need for a NodeJS runtime. I recommend changing the app engine runtime from "nodejs" to "custom" and provide a docker image that uses Nginx to serve the production files. Nginx is highly performant and widely used and a safe choice.
 
 
 
 # Other considerations outside of the problem scope
+
+### Build a useful dashboard
+
+The problem could have been caught right away with a proper monitoring dashboard and some well defined alerts. The 502s happened when the instances were overloaded and some proper monitoring of cpu and ram usage would show the problem early. Steven Parker can follow up on this and build a helpful dashboard.
 
 ### Slow deploy
 
